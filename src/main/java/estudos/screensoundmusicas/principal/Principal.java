@@ -40,7 +40,8 @@ public class Principal {
                     cadastrarArtista();
                     break;
                 case 2:
-
+                    cadastrarMusica();
+                    break;
                 case 9:
                     System.out.println("Saindo...");
                     break;
@@ -71,7 +72,10 @@ public class Principal {
         } else {
             System.out.println("Inválido.");
         }
+    }
 
-
+    private void cadastrarMusica() {
+        System.out.println("Cadastrar música de qual artista?  ");
+        var nome = scanner.nextLine();
     }
 }
