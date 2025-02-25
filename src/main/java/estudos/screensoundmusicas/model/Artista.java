@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 @Entity
@@ -47,8 +48,18 @@ public class Artista {
         this.nome = nome;
     }
 
+    public List<Musica> getMusicas() {
+        return musicas;
+    }
+
+    public void setMusicas(List<Musica> musicas) {
+        this.musicas = musicas;
+    }
+
     @Override
     public String toString() {
-        return "Artista: " + getNome() + " - Tipo: " + getTipoCategoria().getCategoria();
+        return "Artista: " + getNome() + " - Tipo: " + getTipoCategoria().getCategoria() + " Musica: " + getMusicas();
     }
+
+
 }
